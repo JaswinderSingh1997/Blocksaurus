@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Nextra docs template",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build",
     "start": "next start"
   },
   "repository": {
@@ -18,14 +19,19 @@
   },
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
+    "mongodb-level": "^0.0.4",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tinacms": "^1.5.28",
+    "tinacms-authjs": "^1.0.5",
+    "tinacms-gitprovider-github": "^1.0.3"
   },
   "devDependencies": {
-    "@types/node": "18.11.10",
+    "@tinacms/cli": "^1.5.39",
+    "@types/node": "^18.11.10",
     "typescript": "^4.9.3"
   }
 }
