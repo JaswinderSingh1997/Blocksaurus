@@ -1,8 +1,7 @@
 import { Collection } from "tinacms";
-
 export const PageCollection: Collection = {
-  name: "page",
-  label: "Page",
+  name: "blocks",
+  label: "Blocks",
   path: "pages",
   format: "mdx",
   ui: {
@@ -42,6 +41,13 @@ export const PageCollection: Collection = {
         { type: "string", name: "description" },
         { type: "string", name: "url" },
       ],
+    },
+    {
+      type: "rich-text",
+      name: "body",
+      label: "Body",
+      isBody: true,
+      // templates: [...MDXTemplates],
     },
   ],
 };

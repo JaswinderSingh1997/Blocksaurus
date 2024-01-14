@@ -2,7 +2,7 @@ import { defineConfig, LocalAuthProvider } from "tinacms";
 import {
   UsernamePasswordAuthJSProvider,
   TinaUserCollection,
-} from "tinacms-authjs/dist/tinacms";
+} from "tinacms-authjs/dist/tinacms"; 
 import { PageCollection } from "./collections/page";
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -25,7 +25,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "uploads",
       publicFolder: "public",
     },
   },
