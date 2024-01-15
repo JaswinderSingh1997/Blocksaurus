@@ -26,7 +26,8 @@ const config: DocsThemeConfig = {
       <meta property="og:title" content="BlocksDocs" />
     <title>Blocks Docs</title>
     </>
-  )
+  ),
+  docsRepositoryBase: 'https://github.com/JaswinderSingh1997/Blocksaurus/tree/main'
 }
 
 export default config

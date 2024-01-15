@@ -4,14 +4,16 @@ export const PageCollection: Collection = {
   label: "Blocks",
   path: "pages",
   format: "mdx",
-  ui: {
-    router: () => "/",
-  },
   fields: [
     {
       type: "string",
       name: "header",
       label: "Header",
+    },
+    {
+      type: "image",
+      label: "Source",
+      name: "src",
     },
     {
       type: "object",
@@ -39,7 +41,7 @@ export const PageCollection: Collection = {
       fields: [
         { type: "string", name: "header" },
         { type: "string", name: "description" },
-        { type: "string", name: "url" },
+        { type: "string", name: "url" }
       ],
     },
     {
