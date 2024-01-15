@@ -5,11 +5,7 @@ import {
 } from "tinacms-authjs/dist/tinacms"; 
 import { PageCollection } from "./collections/page";
 
-const branch =
-  process.env.GITHUB_BRANCH ||
-  process.env.VERCEL_GIT_COMMIT_REF ||
-  process.env.HEAD ||
-  "main";
+const branch = process.env.GITHUB_BRANCH;
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
@@ -30,8 +26,6 @@ export default defineConfig({
       static: true
     },
   },
-  
-
   schema: {
     collections: [TinaUserCollection, PageCollection
     ],
